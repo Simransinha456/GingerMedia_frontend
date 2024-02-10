@@ -38,6 +38,7 @@ function Profile() {
         dob,
         contact,
       });
+      alert("Successfully saved");
       console.log(response.data);
       setShowModal(false);
     } catch (error) {

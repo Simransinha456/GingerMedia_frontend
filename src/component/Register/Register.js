@@ -26,7 +26,7 @@ function Register() {
     event.preventDefault();
     if (handelValidation()) {
       const { email, username, password } = value;
-      const { data } = await axios.put("https://simransinha456-ginger-media-backend.vercel.app/register", {
+      const { data } = await axios.post("https://simransinha456-ginger-media-backend.vercel.app/register", {
       // const { data } = await axios.post("http://localhost:8000/register", {
         username,
         email,
