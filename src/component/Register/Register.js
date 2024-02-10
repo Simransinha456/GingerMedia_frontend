@@ -4,7 +4,6 @@ import "./Register.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-// import { registerRoute } from "../utils/APIRouter";
 
 function Register() {
   const navigate = useNavigate();
@@ -41,10 +40,12 @@ function Register() {
     const { password, conformpassword,username, email } = value;
     if (username=== "")
     {
+      alert("Username is required.");
         toast.error("Username is required.", toastVeriable);
         return false;
     }
     else if (password !== conformpassword) {
+      alert("Password and confirm password should be the same.");
       toast.error(
         "Password and confirm password should be the same.",
         toastVeriable
@@ -53,6 +54,7 @@ function Register() {
     } 
      
     else if (email === "") {
+      alert("Email is required.");
       toast.error("Email is required.", toastVeriable);
       return false;
     }
